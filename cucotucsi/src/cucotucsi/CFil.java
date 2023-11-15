@@ -2,19 +2,19 @@ package cucotucsi;
 
 public class CFil extends Thread {
     private String nombre;
-    private int temporizacion; // Agrega un atributo de temporización
+    private int temporizacion; // temporizador
 
     public CFil(String nombre, int temporizacion) {
         this.nombre = nombre;
         this.temporizacion = temporizacion;
     }
 
-    // Getter para consultar el nombre del proceso
+    // Getter
     public String getNombre() {
         return nombre;
     }
 
-    // Setter para modificar la temporización
+    // Setter
     public void setTemporizacion(int temporizacion) {
         this.temporizacion = temporizacion;
     }
@@ -22,7 +22,7 @@ public class CFil extends Thread {
     @Override
     public void run() {
         try {
-            // Simula la ejecución del proceso hijo
+            // ejecución del proceso hijo
             Thread.sleep(temporizacion);
         } catch (InterruptedException e) {
             e.printStackTrace();
