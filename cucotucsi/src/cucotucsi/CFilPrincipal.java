@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CFilPrincipal {
     public static void main(String[] args) {
-        int numProcesosHijos = 3; // Por ejemplo, puedes obtenerlo desde el usuario
+        int numProcesosHijos = 3; 
 
         if (numProcesosHijos <= 0 || numProcesosHijos > 10) {
             System.out.println("Número de procesos hijos no válido.");
@@ -15,7 +15,7 @@ public class CFilPrincipal {
         List<CFil> procesosHijos = new ArrayList<>();
 
         for (int i = 0; i < numProcesosHijos; i++) {
-            CFil procesoHijo = new CFil("Hijo" + i, (i + 1) * 1000); // Temporización creciente
+            CFil procesoHijo = new CFil("Hijo" + i, (i + 1) * 1000); // Temporización
             procesoHijo.start();
             procesosHijos.add(procesoHijo);
         }
